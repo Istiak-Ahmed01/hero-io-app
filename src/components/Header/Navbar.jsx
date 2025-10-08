@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import logoImg from '../../assets/logo.png'
+import gitHubImg from '../../assets/gitHub.png'
 
 const Navbar = () => {
-    const [activeNav,setActiveNav]=useState('')
+    const [activeNav, setActiveNav] = useState('home')
+
+    const handleActiveNav = (nav) => {
+        setActiveNav(nav)
+    }
+
+    const activeClass = 'text-[16px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2] underline decoration-[#9F62F2]'
+    const normalClass = 'text-[16px] font-semibold text-gray-700 hover:text-[#632EE3] transition'
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
@@ -15,12 +23,12 @@ const Navbar = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li>
-                                <a className='text-[16px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2] underline decoration-[#9F62F2]'>
+                                <a onClick={() => handleActiveNav('home')} className={activeNav === 'home' ? activeClass : normalClass}>
                                     Home
                                 </a>
                             </li>
-                            <li><a>Apps</a></li>
-                            <li><a>Installation</a></li>
+                            <li><a onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</a></li>
+                            <li><a onClick={() => handleActiveNav('installation')} className={activeNav === 'installation' ? activeClass : normalClass}>Installation</a></li>
                         </ul>
                     </div>
                     <img className='w-10 h-10' src={logoImg} alt="" />
@@ -29,16 +37,16 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
-                            <a className='text-[16px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2] underline decoration-[#9F62F2]'>
+                            <a onClick={() => handleActiveNav('home')} className={activeNav === 'home' ? activeClass : normalClass}>
                                 Home
                             </a>
                         </li>
-                        <li><a>Apps</a></li>
-                        <li><a>Installation</a></li>
+                        <li><a onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</a></li>
+                        <li><a onClick={() => handleActiveNav('installation')} className={activeNav === 'installation' ? activeClass : normalClass}>Installation</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white text-lg font-bold"> <span><img src={gitHubImg} alt="" /></span>Contribute</a>
                 </div>
             </div>
         </div>

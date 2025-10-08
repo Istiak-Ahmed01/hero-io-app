@@ -1,0 +1,362 @@
+[
+  {
+    "image": "https://previewed.app/static/screenshots/app-store-screenshot-generator-iphone.png",
+    "title": "FitTrack – Health & Fitness",
+    "companyName": "WellNest Inc.",
+    "id": 101,
+    "description": "Track your workouts, steps, calories, and health metrics in one place.",
+    "size": 52.3,
+    "reviews": 1542,
+    "ratingAvg": 4.5,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 45 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 220 },
+      { "name": "4 star", "count": 480 },
+      { "name": "5 star", "count": 717 }
+    ]
+  },
+  {
+    "image": "https://www.mobilespoon.net/wp-content/uploads/2019/04/app-screenshot-example.jpg",
+    "title": "FoodieGo – Food Delivery",
+    "companyName": "TasteTech Ltd.",
+    "id": 102,
+    "description": "Order food from your favorite restaurants and track delivery in real time.",
+    "size": 68.1,
+    "reviews": 2348,
+    "ratingAvg": 4.2,
+    "downloads": 250000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 130 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 854 },
+      { "name": "5 star", "count": 874 }
+    ]
+  },
+  {
+    "image": "https://www.launchmatic.app/templates/travel-app-screenshots/flight-itinerary-mockup.png",
+    "title": "TripMaster – Travel Planner",
+    "companyName": "GlobeTrotter Co.",
+    "id": 103,
+    "description": "Plan your trips: flights, hotels, itineraries and maps in one app.",
+    "size": 74.5,
+    "reviews": 975,
+    "ratingAvg": 4.6,
+    "downloads": 98000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 440 }
+    ]
+  },
+  {
+    "image": "https://appinstitute.com/wp-content/uploads/2016/12/app-screenshot-example-business.jpg",
+    "title": "BizManage – Business Suite",
+    "companyName": "ProSoft Solutions",
+    "id": 104,
+    "description": "Manage clients, projects, invoices, and tasks on the go.",
+    "size": 60.8,
+    "reviews": 1220,
+    "ratingAvg": 4.3,
+    "downloads": 75000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 400 }
+    ]
+  },
+  {
+    "image": "https://previewed.app/static/screenshots/ios-mockup-template.png",
+    "title": "LearnLang – Language Learning",
+    "companyName": "BrainWave EdTech",
+    "id": 105,
+    "description": "Interactive lessons, quizzes, and speaking practice to master languages.",
+    "size": 55.9,
+    "reviews": 1875,
+    "ratingAvg": 4.7,
+    "downloads": 180000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1135 }
+    ]
+  },
+  {
+    "image": "https://assets-global.website-files.com/5f02e7c2ec6b364d7a503b59/6102af3d469383b0a3f986d7_app-store-screenshot-example.jpg",
+    "title": "ShopEase – E-Commerce",
+    "companyName": "RetailCloud Ltd.",
+    "id": 106,
+    "description": "Browse and buy over thousands of products, with secure checkout.",
+    "size": 82.4,
+    "reviews": 3050,
+    "ratingAvg": 4.1,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 830 }
+    ]
+  },
+  {
+    "image": "https://assets.materialup.com/uploads/2d9f64c7-ef93-4f8a-a9e2-3a2ac3e8e9a3/preview.jpg",
+    "title": "MindSpace – Meditation & Sleep",
+    "companyName": "Zen Labs",
+    "id": 107,
+    "description": "Meditation guides, sleep sounds & breathing exercises to reduce stress.",
+    "size": 47.2,
+    "reviews": 2100,
+    "ratingAvg": 4.8,
+    "downloads": 160000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 1510 }
+    ]
+  },
+  {
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/4828b918189145.5603860b8a6a3.jpg",
+    "title": "PhotoArt – Photo Editor",
+    "companyName": "CreativeSoft",
+    "id": 108,
+    "description": "Filters, stickers, collage maker, and advanced tools for editing images.",
+    "size": 90.5,
+    "reviews": 2700,
+    "ratingAvg": 4.4,
+    "downloads": 210000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 110 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 1130 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/458522/screenshots/15305160/media/bde55b440af6ed26423f8a620b86ad26.jpg",
+    "title": "NewsFlash – Daily News",
+    "companyName": "Pulse Media",
+    "id": 109,
+    "description": "Get the latest news, personalized feed, and offline reading options.",
+    "size": 38.7,
+    "reviews": 1980,
+    "ratingAvg": 4.2,
+    "downloads": 140000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 750 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/204955/screenshots/17043744/media/5a1762e3a0d5b0cfb93b61f7c1484a3e.jpg",
+    "title": "ChatMeet – Social Chat",
+    "companyName": "Connectly",
+    "id": 110,
+    "description": "Chat, voice, and video calls with friends, and discover new people.",
+    "size": 65.0,
+    "reviews": 3250,
+    "ratingAvg": 4.0,
+    "downloads": 350000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 800 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/3899/screenshots/19001889/media/dcdbb880d74b22b13e87bfc762d5bb3a.jpg",
+    "title": "BudgetPal – Expense Tracker",
+    "companyName": "FinSavvy Apps",
+    "id": 111,
+    "description": "Track expenses, set budgets, and view financial insights and reports.",
+    "size": 49.3,
+    "reviews": 1450,
+    "ratingAvg": 4.5,
+    "downloads": 95000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 55 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 770 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/25514/screenshots/17870252/media/bcf7c8f1df274d048b3e1b2999e1d9cc.jpg",
+    "title": "WeatherWise – Weather Forecast",
+    "companyName": "SkyCast Corp.",
+    "id": 112,
+    "description": "Hourly & daily forecasts, radar maps, and severe weather alerts.",
+    "size": 28.4,
+    "reviews": 1100,
+    "ratingAvg": 4.3,
+    "downloads": 125000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 445 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/6569/screenshots/18461509/media/d1c198bd0a3cf3b50e9b8da85753f505.jpg",
+    "title": "NoteSync – Cloud Notes",
+    "companyName": "DataSync Labs",
+    "id": 113,
+    "description": "Create, sync, and share notes securely across all your devices.",
+    "size": 33.6,
+    "reviews": 890,
+    "ratingAvg": 4.6,
+    "downloads": 70000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 450 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/1250563/screenshots/15132457/media/0e9a847aeff9f29c3084d1a3cf13e4c1.jpg",
+    "title": "GameZone – Arcade Fun",
+    "companyName": "PixelPlay Studio",
+    "id": 114,
+    "description": "Hundreds of free arcade and puzzle games in one app.",
+    "size": 120.5,
+    "reviews": 5620,
+    "ratingAvg": 4.4,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 320 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 1900 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/2202642/screenshots/15083090/media/2ef9c2b8ec0d3d9b6c38d9a3aa406a57.jpg",
+    "title": "MusicMate – Music Player",
+    "companyName": "Harmony Tech",
+    "id": 115,
+    "description": "Stream, download and create your own playlists anytime, anywhere.",
+    "size": 58.2,
+    "reviews": 4700,
+    "ratingAvg": 4.6,
+    "downloads": 420000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 1300 },
+      { "name": "5 star", "count": 2200 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/2518730/screenshots/15236076/media/67e8351bbcc45a5b229a4a4dcb8eb02d.jpg",
+    "title": "EduPro – Online Courses",
+    "companyName": "Learnify",
+    "id": 116,
+    "description": "Thousands of expert-led online courses to boost your skills.",
+    "size": 75.3,
+    "reviews": 3980,
+    "ratingAvg": 4.7,
+    "downloads": 230000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 2500 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/155458/screenshots/17334410/media/9ab1c3d4fa3cb6f95e8046f0dd8293db.jpg",
+    "title": "DriveSafe – Navigation",
+    "companyName": "AutoSmart Ltd.",
+    "id": 117,
+    "description": "GPS navigation, real-time traffic updates, and voice directions.",
+    "size": 85.4,
+    "reviews": 3100,
+    "ratingAvg": 4.3,
+    "downloads": 260000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1300 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/4466234/screenshots/15425557/media/d3fef5da938dfb7a837f228056ca68f3.jpg",
+    "title": "TaskHero – Productivity",
+    "companyName": "NextGen Apps",
+    "id": 118,
+    "description": "Organize your day, set reminders, and achieve goals effectively.",
+    "size": 43.5,
+    "reviews": 1990,
+    "ratingAvg": 4.6,
+    "downloads": 98000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1135 }
+    ]
+  },
+  {
+    "image": "https://cdn.dribbble.com/users/2535315/screenshots/15719930/media/d1399d4d6e4517e9aeb0cc57a593ae5c.jpg",
+    "title": "Cookify – Recipe Book",
+    "companyName": "KitchenIQ",
+    "id": 119,
+    "description": "Discover thousands of recipes, meal plans, and grocery lists.",
+    "size": 70.6,
+    "reviews": 1870,
+    "ratingAvg": 4.5,
+    "downloads": 110000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 960 }
+    ]
+  },
+  {
+  "image": "https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+  "title": "StockSmart – Investing",
+  "companyName": "FinFlow",
+  "id": 120,
+  "description": "Invest in stocks, ETFs and fractional shares with real-time market data, portfolio tracking, watchlists, in-app research and news, customizable price alerts, commission-free trading, secure bank transfers, and tax reporting. Includes educational guides and tools for both beginners and active traders.",
+  "size": 64.1,
+  "reviews": 8420,
+  "ratingAvg": 4.4,
+  "downloads": 410000,
+  "ratings": [
+    { "name": "1 star", "count": 400 },
+    { "name": "2 star", "count": 350 },
+    { "name": "3 star", "count": 900 },
+    { "name": "4 star", "count": 2000 },
+    { "name": "5 star", "count": 4770 }
+  ]
+}
+]
