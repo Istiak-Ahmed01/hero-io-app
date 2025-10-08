@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logoImg from '../../assets/logo.png'
 import gitHubImg from '../../assets/gitHub.png'
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const [activeNav, setActiveNav] = useState('home')
@@ -23,11 +24,11 @@ const Navbar = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li>
-                                <a onClick={() => handleActiveNav('home')} className={activeNav === 'home' ? activeClass : normalClass}>
+                                <Link to="/" onClick={() => handleActiveNav('home')} className={activeNav === 'home' ? activeClass : normalClass}>
                                     Home
-                                </a>
+                                </Link>
                             </li>
-                            <li><a onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</a></li>
+                            <li><Link to="/allapps" onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</Link></li>
                             <li><a onClick={() => handleActiveNav('installation')} className={activeNav === 'installation' ? activeClass : normalClass}>Installation</a></li>
                         </ul>
                     </div>
@@ -37,20 +38,21 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
-                            <a onClick={() => handleActiveNav('home')} className={activeNav === 'home' ? activeClass : normalClass}>
+                            <Link to="/" onClick={() => handleActiveNav('home')} className={activeNav === 'home' ? activeClass : normalClass}>
                                 Home
-                            </a>
+                            </Link>
                         </li>
-                        <li><a onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</a></li>
+
+                        <li><Link to="/allapps" onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</Link></li>
                         <li><a onClick={() => handleActiveNav('installation')} className={activeNav === 'installation' ? activeClass : normalClass}>Installation</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <a
-                    href='https://github.com/Istiak-Ahmed01'
-                    target='_blank'
-                    
-                    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white text-lg font-bold"> <span><img src={gitHubImg} alt="" /></span>Contribute</a>
+                        href='https://github.com/Istiak-Ahmed01'
+                        target='_blank'
+
+                        className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white text-lg font-bold"> <span><img src={gitHubImg} alt="" /></span>Contribute</a>
                 </div>
             </div>
         </div>

@@ -7,11 +7,12 @@ import Allapps from '../pages/Allapps/Allapps';
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: Root,
+    Component: Root,    
     children: [
       {
         index: true,
         path: "/",
+        loader:()=>fetch('/appsData.json'),
         Component: Home
       },
       {

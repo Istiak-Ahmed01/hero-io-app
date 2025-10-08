@@ -4,7 +4,7 @@ import AppCard from '../AppCard/AppCard';
 
 const Allapps = () => {
     const appsData = useLoaderData()
-    console.log(appsData)
+    // console.log(appsData)
     return (
         <div className='bg-[#d2d2d2] p-20 space-y-10'>
             <h1 className='text-5xl font-bold text-center'>Our All Applications</h1>
