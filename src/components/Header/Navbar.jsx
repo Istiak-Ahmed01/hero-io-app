@@ -46,7 +46,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white text-lg font-bold"> <span><img src={gitHubImg} alt="" /></span>Contribute</a>
+                    <a
+                    href='https://github.com/Istiak-Ahmed01'
+                    target='_blank'
+                    
+                    className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white text-lg font-bold"> <span><img src={gitHubImg} alt="" /></span>Contribute</a>
                 </div>
             </div>
         </div>
