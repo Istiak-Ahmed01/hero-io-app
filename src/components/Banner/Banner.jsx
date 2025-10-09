@@ -2,8 +2,10 @@ import React from 'react';
 import playStoreImg from '../../assets/playStore.png'
 import appStoreImg from '../../assets/appStore.png'
 import bannerImg from '../../assets/hero.png'
+import AppCard from '../../pages/AppCard/AppCard';
+import { Link } from 'react-router';
 
-const Banner = () => {
+const Banner = ({ appsData }) => {
     return (
         <div>
             <div className='bg-[#d2d2d2] space-y-8 pt-6'>
@@ -35,12 +37,12 @@ const Banner = () => {
                         <h1 className='text-[64px] font-extrabold'>29.6M</h1>
                         <p className='text-[16px] font-normal'>21% more than last month</p>
                     </div>
-                    <div  className='text-center'>
+                    <div className='text-center'>
                         <p className='text-[16px] font-normal'>Total Reviews</p>
                         <h1 className='text-[64px] font-extrabold'>906K</h1>
                         <p className='text-[16px] font-normal'>46% more than last month</p>
                     </div>
-                    <div  className='text-center'>
+                    <div className='text-center'>
                         <p className='text-[16px] font-normal'>Active Apps</p>
                         <h1 className='text-[64px] font-extrabold'>132+</h1>
                         <p className='text-[16px] font-normal'>31 more will Launch</p>
@@ -48,8 +50,20 @@ const Banner = () => {
 
                 </div>
             </section>
+            <section className='flex flex-col justify-center items-center gap-7 p-20'>
+                <h1 className='text-5xl font-bold'>Trending Apps</h1>
+                <p className='text-xl font-normal text-[#627382]'>Explore All Trending Apps on the Market developed by us</p>
+                <div className='grid grid-cols-4 gap-4'>
+
+                    {
+                        appsData.slice(0,8).map(app => <AppCard key={app.id} app={app}></AppCard>)
+                    }
+
+                </div>
+               <Link to={'/allapps'} className='text-[16px]  bg-gradient-to-r from-[#632EE3] to-[#9F62F2]  text-white px-4 py-2 rounded-lg'>Show All</Link>
 
 
+            </section>
         </div>
     );
 };

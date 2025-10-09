@@ -7,7 +7,7 @@ const Home = () => {
    console.log(appsData)
     return (
         <div>
-            <Banner></Banner>
+            <Banner appsData={appsData}></Banner>
         </div>
     );
 };
