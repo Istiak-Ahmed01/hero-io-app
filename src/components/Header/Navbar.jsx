@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+
 import logoImg from '../../assets/logo.png'
 import gitHubImg from '../../assets/gitHub.png'
 import { Link } from 'react-router';
 
-const Navbar = () => {
-    const [activeNav, setActiveNav] = useState('home')
-
-    const handleActiveNav = (nav) => {
-        setActiveNav(nav)
-    }
+const Navbar = ({activeNav,handleActiveNav}) => {
 
     const activeClass = 'text-[16px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2] underline decoration-[#9F62F2]'
     const normalClass = 'text-[16px] font-semibold text-gray-700 hover:text-[#632EE3] transition'
