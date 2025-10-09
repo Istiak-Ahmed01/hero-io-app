@@ -23,8 +23,8 @@ const Navbar = ({activeNav,handleActiveNav}) => {
                                     Home
                                 </Link>
                             </li>
-                            <li><Link to="/allapps" onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</Link></li>
-                            <li><a onClick={() => handleActiveNav('installation')} className={activeNav === 'installation' ? activeClass : normalClass}>Installation</a></li>
+                            <li><Link to="allapps" onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</Link></li>
+                            <li><Link to="installations" onClick={() => handleActiveNav('installations')} className={activeNav === 'installations' ? activeClass : normalClass}>Installation</Link></li>
                         </ul>
                     </div>
                     <img className='w-10 h-10' src={logoImg} alt="" />
@@ -38,8 +38,8 @@ const Navbar = ({activeNav,handleActiveNav}) => {
                             </Link>
                         </li>
 
-                        <li><Link to="/allapps" onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</Link></li>
-                        <li><a onClick={() => handleActiveNav('installation')} className={activeNav === 'installation' ? activeClass : normalClass}>Installation</a></li>
+                        <li><Link to="allapps" onClick={() => handleActiveNav('apps')} className={activeNav === 'apps' ? activeClass : normalClass}>Apps</Link></li>
+                        <li><Link to="installations" onClick={() => handleActiveNav('installations')} className={activeNav === 'installations' ? activeClass : normalClass}>Installation</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

@@ -1,17 +1,15 @@
 import React from 'react';
 import downloadImg from '../../assets/icon-downloads.png'
 import ratingImg from '../../assets/icon-ratings.png'
+import { Link, useOutletContext } from 'react-router';
 
 const AppCard = ({ app }) => {
-    const { image, title, downloads, ratingAvg } = app
+    const { image, title, downloads, ratingAvg,id } = app
 
-    const formatDownload = (num) => {
-        if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M'
-        if (num >= 1000) return (num / 1000).toFixed(1) + 'K'
-    
-    }
+const {formatDownload}=useOutletContext()
     return (
-        <div className=' bg-white p-7 shadow-md rounded-lg space-y-3'>
+      <Link to={`/allapps/appdetails/${id}`}>
+          <div className=' bg-white p-7 shadow-md rounded-lg space-y-3'>
             <img className=' h-[316px]' src={image} alt="" />
             <h6 className='text-[20px] font-medium'>{title}</h6>
             <div className='flex justify-between'>
@@ -21,6 +19,7 @@ const AppCard = ({ app }) => {
 
 
         </div>
+      </Link>
     );
 };
 

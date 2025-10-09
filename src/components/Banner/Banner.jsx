@@ -32,7 +32,7 @@ const Banner = ({ appsData }) => {
             </div>
             <section className='bg-gradient-to-r from-[#632EE3] to-[#9F62F2]  text-white space-y-7 p-8'>
                 <h1 className='text-5xl font-bold text-center'>Trusted by Millions, Built for You</h1>
-                <div className='flex justify-center gap-12 space-y-4'>
+                <div className='flex flex-col md:flex-row justify-center gap-12 space-y-4'>
                     <div className='text-center'>
                         <p className='text-[16px] font-normal'>Total Downloads</p>
                         <h1 className='text-[64px] font-extrabold'>29.6M</h1>
@@ -51,10 +51,10 @@ const Banner = ({ appsData }) => {
 
                 </div>
             </section>
-            <section className='flex flex-col justify-center items-center gap-7 p-20'>
+            <section className='flex flex-col justify-center items-center gap-7 p-20 bg-[#d2d2d2]'>
                 <h1 className='text-5xl font-bold text-center'>Trending Apps</h1>
                 <p className='text-xl font-normal text-[#627382] text-center'>Explore All Trending Apps on the Market developed by us</p>
-                <div className='grid grid-cols-1 md:grid-cols-4 gap-4 max-h-[600px] md:max-h-none overflow-y-auto'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-4 max-h-[600px] md:max-h-none overflow-y-auto '>
 
                     {
                         appsData.slice(0,8).map(app => <AppCard key={app.id} app={app}></AppCard>)
@@ -62,7 +62,7 @@ const Banner = ({ appsData }) => {
 
                 </div>
                <Link
-               to='/allapps'
+               to='allapps'
                 onClick={()=>handleActiveNav("apps")} 
                  className='text-[16px]  bg-gradient-to-r from-[#632EE3] to-[#9F62F2]  text-white px-4 py-2 rounded-lg'>Show All</Link>
 
