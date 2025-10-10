@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import downloadImg from '../../assets/icon-downloads.png';
 import ratingImg from '../../assets/icon-ratings.png';
 import reviewImg from '../../assets/reviewImg.png';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 import NoAppImg from '../../assets/App-Error.png';
+  import { ToastContainer, toast } from 'react-toastify';
 
 import { Link, useLoaderData, useOutletContext, useParams } from 'react-router';
 
@@ -15,8 +16,15 @@ const AppDetails = () => {
 
     const singleApp = data.find(app => app.id === appId);
 
-    // Safe destructuring with optional chaining to avoid crash
+    
     const { image, title, downloads, ratingAvg, reviews, companyName, size, description } = singleApp || {};
+    const [isInstalled,setIsInstalled]=useState(false)
+
+    const changeInstallation=()=>{
+        setIsInstalled(true)
+    }
+
+    const notify = () => toast("Successfully Installed");
 
     return (
         <div>
@@ -47,9 +55,13 @@ const AppDetails = () => {
                                     <h1 className='text-[40px] font-extrabold'>{formatDownload(reviews)}</h1>
                                 </div>
                             </section>
-                            <button className='px-4 py-2 bg-green-300 text-white rounded-lg'>
-                                Install Now ({size} MB)
+                            <button onClick={()=>{changeInstallation(),notify()}} 
+                            disabled={isInstalled}
+                            className={`px-4 py-2 ${isInstalled?'bg-gray-300 cursor-not-allowed': 'bg-green-300 hover:bg-green-400'} text-white rounded-lg`}>
+                                {isInstalled?"Installed": `Install Now (${size} MB)`}
+
                             </button>
+                            <ToastContainer />
                         </div>
                     </div>
 
