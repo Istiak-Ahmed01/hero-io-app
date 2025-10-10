@@ -4,7 +4,7 @@ import ratingImg from '../../assets/icon-ratings.png';
 import reviewImg from '../../assets/reviewImg.png';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 import NoAppImg from '../../assets/App-Error.png';
-  import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { Link, useLoaderData, useOutletContext, useParams } from 'react-router';
 
@@ -16,15 +16,29 @@ const AppDetails = () => {
 
     const singleApp = data.find(app => app.id === appId);
 
-    
-    const { image, title, downloads, ratingAvg, reviews, companyName, size, description } = singleApp || {};
-    const [isInstalled,setIsInstalled]=useState(false)
 
-    const changeInstallation=()=>{
+    const { image, title, downloads, ratingAvg, reviews, companyName, size, description } = singleApp || {};
+
+
+    const [isInstalled, setIsInstalled] = useState(() => {
+        const installedApps = JSON.parse(localStorage.getItem('installedApps')) || [];
+        return installedApps.includes(appId);
+    });
+
+    const changeInstallation = () => {
         setIsInstalled(true)
     }
 
     const notify = () => toast("Successfully Installed");
+
+    const saveToLocalStorage = () => {
+        const installedApps = JSON.parse(localStorage.getItem('installedApps')) || []
+
+        if (!installedApps.includes(appId)) {
+            installedApps.push(appId)
+            localStorage.setItem('installedApps', JSON.stringify(installedApps))
+        }
+    }
 
     return (
         <div>
@@ -55,10 +69,10 @@ const AppDetails = () => {
                                     <h1 className='text-[40px] font-extrabold'>{formatDownload(reviews)}</h1>
                                 </div>
                             </section>
-                            <button onClick={()=>{changeInstallation(),notify()}} 
-                            disabled={isInstalled}
-                            className={`px-4 py-2 ${isInstalled?'bg-gray-300 cursor-not-allowed': 'bg-green-300 hover:bg-green-400'} text-white rounded-lg`}>
-                                {isInstalled?"Installed": `Install Now (${size} MB)`}
+                            <button onClick={() => { changeInstallation(); notify(); saveToLocalStorage(); }}
+                                disabled={isInstalled}
+                                className={`px-4 py-2 ${isInstalled ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-300 hover:bg-green-400'} text-white rounded-lg`}>
+                                {isInstalled ? "Installed" : `Install Now (${size} MB)`}
 
                             </button>
                             <ToastContainer />
