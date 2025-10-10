@@ -1,31 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLoaderData, useOutletContext } from 'react-router';
 import downloadImg from '../../assets/icon-downloads.png'
 import ratingImg from '../../assets/icon-ratings.png'
 
 const Installations = () => {
     const data = useLoaderData();
-
-
-    const installedAppIds = JSON.parse(localStorage.getItem('installedApps')) || [];
-
-
-    const installedApps = data.filter(app => installedAppIds.includes(app.id));
-
     const { formatDownload } = useOutletContext();
+
+    
+    const [installedApps, setInstalledApps] = useState([]);
+
+    
+    useEffect(() => {
+        const storedIds = JSON.parse(localStorage.getItem('installedApps')) || [];
+        const filtered = data.filter(app => storedIds.includes(app.id));
+        setInstalledApps(filtered);
+    }, [data]);
 
     const unInstall = (id) => {
         const storedIds = JSON.parse(localStorage.getItem('installedApps')) || [];
         const updatedIds = storedIds.filter(appId => appId !== id);
         localStorage.setItem('installedApps', JSON.stringify(updatedIds));
 
-
+        setInstalledApps(prev => prev.filter(app => app.id !== id));
     };
 
     return (
         <div className='p-20 space-y-5'>
             <h1 className='text-5xl font-bold text-center '>Your Installed Apps</h1>
-            <p className='text-[20px] font-normal text-[#627382] text-center'>Explore All Trending Apps on the Market developed by us</p>
+            <p className='text-[20px] font-normal text-[#627382] text-center'>
+                Explore All Trending Apps on the Market developed by us
+            </p>
 
             <div className='flex justify-between'>
                 <h1>{installedApps.length} Apps Found</h1>
@@ -44,7 +49,6 @@ const Installations = () => {
 
             {installedApps.map(app => {
                 const { id, image, title, downloads, ratingAvg, size } = app;
-
                 return (
                     <div
                         key={id}
