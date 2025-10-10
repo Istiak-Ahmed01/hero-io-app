@@ -2,7 +2,7 @@ import React from 'react';
 import downloadImg from '../../assets/icon-downloads.png'
 import ratingImg from '../../assets/icon-ratings.png'
 import reviewImg from '../../assets/reviewImg.png'
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 import { useLoaderData, useOutletContext, useParams } from 'react-router';
 
@@ -16,14 +16,14 @@ const AppDetails = () => {
     // console.log(singleApp)
     const { image, title, downloads, ratingAvg, reviews, companyName, size, description, } = singleApp
     return (
-        <div className='p-20 space-y-10'>
-            <div className='flex gap-13 '>
+        <div className='p-14 md:p-20 space-y-10'>
+            <div className='flex flex-col md:flex-row gap-13 '>
                 <img className='h-[350px]' src={image} alt="" />
                 <div className='space-y-5 flex-1'>
                     <h1 className='text-[32px] font-bold'>{title}</h1>
                     <p className='text-[#627382] text-[20px]'>Developed by <span className='text-[#632EE3] font-semibold'>{companyName}</span></p>
                     <div className='border-t-2 border-gray-400 w-full '></div>
-                    <section className='flex gap-15'>
+                    <section className='flex flex-col md:flex-row gap-15'>
                         <div>
                             <img className='' src={downloadImg} alt="" />
                             <p className='text-[16px] font-normal'>Downloads</p>
@@ -50,16 +50,21 @@ const AppDetails = () => {
 
 
 
-                <BarChart width={800} height={300} data={singleApp.ratings} layout='vertical'
-                    margin={{ top: 20, right: 30, left: 100, bottom: 20 }}
-
-                >
-                    <XAxis type="number" />
-                    <YAxis type='category' dataKey="name" />
-                    <Tooltip />
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <Bar dataKey="count" fill="#f97316" />
-                </BarChart>
+                <div className='w-full'>
+                    <ResponsiveContainer width="90%" height={300}>
+                        <BarChart
+                            data={singleApp.ratings}
+                            layout='vertical'
+                            margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+                        >
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis type="number" />
+                            <YAxis type="category" dataKey="name" />
+                            <Tooltip />
+                            <Bar dataKey="count" fill="#f97316" />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
             </section>
             <div className='border-t-2 border-gray-400 w-full '></div>
             <section className='space-y-6'>
