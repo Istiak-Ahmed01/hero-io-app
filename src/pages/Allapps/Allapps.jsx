@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData, useOutletContext } from 'react-router';
 import AppCard from '../AppCard/AppCard';
+import NoAppImg from '../../assets/App-Error.png'
 
 const Allapps = () => {
     const appsData = useLoaderData()
@@ -54,13 +55,18 @@ const Allapps = () => {
                 {
                     search && filteredApps.length === 0 && (
                         <>
-                            <h1 className='text-5xl font-semibold text-center col-span-full overflow-y-hidden'>No Apps Found</h1>
+                        <div className='flex flex-col items-center col-span-full gap-6 overflow-y-hidden'>
+                                                    <img src={NoAppImg} alt="" />
+                            <h1 className='text-5xl font-semibold  col-span-full overflow-y-hidden'>OPPS!! APP NOT FOUND</h1>
+                            <p className='text-[#627382] text-[20px] font-normal'>The App you are requesting is not found on our system.  please try another apps</p>
                             <Link
                                 to='/allapps'
                                 onClick={() => {handleActiveNav("apps")
                                     setSearch('')}
                                 }
-                                className='text-[30px]  bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-lg text-center col-span-full mx-auto w-fit'>Show All</Link>
+                                className='text-[30px]  bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-lg col-span-full w-fit'>Show All</Link>
+
+                        </div>
                         </>
                     )
 
