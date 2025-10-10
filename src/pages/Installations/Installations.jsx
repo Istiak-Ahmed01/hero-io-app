@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useLoaderData, useOutletContext } from 'react-router';
 import downloadImg from '../../assets/icon-downloads.png'
 import ratingImg from '../../assets/icon-ratings.png'
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Installations = () => {
     const data = useLoaderData();
     const { formatDownload } = useOutletContext();
 
-    
+
     const [installedApps, setInstalledApps] = useState([]);
 
-    
+
     useEffect(() => {
         const storedIds = JSON.parse(localStorage.getItem('installedApps')) || [];
         const filtered = data.filter(app => storedIds.includes(app.id));
@@ -25,20 +27,44 @@ const Installations = () => {
         setInstalledApps(prev => prev.filter(app => app.id !== id));
     };
 
+    const notify = () => toast("App Uninstalled from your device");
+    const [sort, setSort] = useState("Sort")
+
+const sortBySize =()=>{
+
+  const sortApps = [...installedApps].sort((a,b)=>a.size-b.size)
+  setInstalledApps(sortApps)
+
+}
+const sortByRatings =()=>{
+
+  const sortApps = [...installedApps].sort((a,b)=>a.ratingAvg-b.ratingAvg)
+  setInstalledApps(sortApps)
+
+}
+const sortByDownloads =()=>{
+
+  const sortApps = [...installedApps].sort((a,b)=>a.downloads-b.downloads)
+  setInstalledApps(sortApps)
+
+}
+
     return (
         <div className='p-20 space-y-5'>
+            <ToastContainer />
             <h1 className='text-5xl font-bold text-center '>Your Installed Apps</h1>
             <p className='text-[20px] font-normal text-[#627382] text-center'>
                 Explore All Trending Apps on the Market developed by us
             </p>
 
             <div className='flex justify-between'>
-                <h1>{installedApps.length} Apps Found</h1>
+                <h1 className='text-2xl font-semibold'>{installedApps.length} Apps Found</h1>
                 <div className="dropdown dropdown-start">
-                    <div tabIndex={0} role="button" className="btn m-1">Sort By Size ⬇️</div>
+                    <div tabIndex={0} role="button" className="btn m-1">{sort} ⬇️</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a onClick={() => {setSort('Sort By Size');sortBySize()}}>Sort By Size </a></li>
+                        <li><a onClick={() => {setSort('Sort By Ratings');sortByRatings()}}>Sort By Ratings </a></li>
+                        <li><a onClick={() => {setSort('Sort By Downloads');sortByDownloads()}}>Sort By Downloads </a></li>
                     </ul>
                 </div>
             </div>
@@ -72,11 +98,16 @@ const Installations = () => {
                             </div>
                         </div>
 
+
                         <button
-                            onClick={() => unInstall(id)}
+                            onClick={() => { unInstall(id); notify() }}
                             className='px-2 py-1 h-11 text-[16px] text-white bg-green-300 hover:bg-green-400 rounded-xl'>
                             Uninstall
+
+
                         </button>
+
+
                     </div>
                 );
             })}

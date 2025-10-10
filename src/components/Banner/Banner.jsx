@@ -7,6 +7,8 @@ import { Link, useOutletContext } from 'react-router';
 
 const Banner = ({ appsData }) => {
     const {handleActiveNav} =useOutletContext();
+
+     const safeAppsData = appsData || [];
     return (
         <div className=''>
             <div className='bg-[#d2d2d2] space-y-8 pt-6'>
@@ -57,7 +59,7 @@ const Banner = ({ appsData }) => {
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-4 max-h-[600px] md:max-h-none overflow-y-auto '>
 
                     {
-                        appsData.slice(0,8).map(app => <AppCard key={app.id} app={app}></AppCard>)
+                        safeAppsData.slice(0,8).map(app => <AppCard key={app.id} app={app}></AppCard>)
                     }
 
                 </div>
