@@ -42,9 +42,15 @@ const Installations = () => {
         setInstalledApps(sortApps)
 
     }
-    const sortByDownloads = () => {
+    const sortByDownloadsDescending = () => {
 
         const sortApps = [...installedApps].sort((a, b) => a.downloads - b.downloads)
+        setInstalledApps(sortApps)
+
+    }
+    const sortByDownloadsAscending = () => {
+
+        const sortApps = [...installedApps].sort((a, b) => b.downloads - a.downloads)
         setInstalledApps(sortApps)
 
     }
@@ -62,9 +68,11 @@ const Installations = () => {
                 <div className="dropdown dropdown-start">
                     <div tabIndex={0} role="button" className="btn m-1">{sort} ⬇️</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li><a onClick={() => { setSort('Sort By Downloads'); sortByDownloadsDescending() }}>Sort By Downloads descending</a></li>
+                        <li><a onClick={() => { setSort('Sort By Downloads'); sortByDownloadsAscending() }}>Sort By Downloads ascending</a></li>
+
                         <li><a onClick={() => { setSort('Sort By Size'); sortBySize() }}>Sort By Size </a></li>
                         <li><a onClick={() => { setSort('Sort By Ratings'); sortByRatings() }}>Sort By Ratings </a></li>
-                        <li><a onClick={() => { setSort('Sort By Downloads'); sortByDownloads() }}>Sort By Downloads </a></li>
                     </ul>
                 </div>
             </div>
