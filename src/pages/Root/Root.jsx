@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Header/Navbar';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigation } from 'react-router';
 import Footer from '../../components/Footer/Footer';
+import Spinner from '../../components/Spinner/Spinner';
+
 
 const Root = () => {
 
@@ -18,10 +20,14 @@ const Root = () => {
     
     }
 
+    const navigation=useNavigation()
+
     return (
         <div>
             <Navbar activeNav={activeNav} handleActiveNav={handleActiveNav}></Navbar>
-            <Outlet context={{handleActiveNav,formatDownload}}></Outlet>
+
+            {(navigation.state==="loading")?(<Spinner></Spinner>):
+           ( <Outlet context={{handleActiveNav,formatDownload}}></Outlet>)}
             <Footer></Footer>
         </div>
     );

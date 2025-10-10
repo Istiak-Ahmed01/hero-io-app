@@ -30,24 +30,24 @@ const Installations = () => {
     const notify = () => toast("App Uninstalled from your device");
     const [sort, setSort] = useState("Sort")
 
-const sortBySize =()=>{
+    const sortBySize = () => {
 
-  const sortApps = [...installedApps].sort((a,b)=>a.size-b.size)
-  setInstalledApps(sortApps)
+        const sortApps = [...installedApps].sort((a, b) => a.size - b.size)
+        setInstalledApps(sortApps)
 
-}
-const sortByRatings =()=>{
+    }
+    const sortByRatings = () => {
 
-  const sortApps = [...installedApps].sort((a,b)=>a.ratingAvg-b.ratingAvg)
-  setInstalledApps(sortApps)
+        const sortApps = [...installedApps].sort((a, b) => a.ratingAvg - b.ratingAvg)
+        setInstalledApps(sortApps)
 
-}
-const sortByDownloads =()=>{
+    }
+    const sortByDownloads = () => {
 
-  const sortApps = [...installedApps].sort((a,b)=>a.downloads-b.downloads)
-  setInstalledApps(sortApps)
+        const sortApps = [...installedApps].sort((a, b) => a.downloads - b.downloads)
+        setInstalledApps(sortApps)
 
-}
+    }
 
     return (
         <div className='p-20 space-y-5'>
@@ -62,9 +62,9 @@ const sortByDownloads =()=>{
                 <div className="dropdown dropdown-start">
                     <div tabIndex={0} role="button" className="btn m-1">{sort} ⬇️</div>
                     <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                        <li><a onClick={() => {setSort('Sort By Size');sortBySize()}}>Sort By Size </a></li>
-                        <li><a onClick={() => {setSort('Sort By Ratings');sortByRatings()}}>Sort By Ratings </a></li>
-                        <li><a onClick={() => {setSort('Sort By Downloads');sortByDownloads()}}>Sort By Downloads </a></li>
+                        <li><a onClick={() => { setSort('Sort By Size'); sortBySize() }}>Sort By Size </a></li>
+                        <li><a onClick={() => { setSort('Sort By Ratings'); sortByRatings() }}>Sort By Ratings </a></li>
+                        <li><a onClick={() => { setSort('Sort By Downloads'); sortByDownloads() }}>Sort By Downloads </a></li>
                     </ul>
                 </div>
             </div>
@@ -78,13 +78,13 @@ const sortByDownloads =()=>{
                 return (
                     <div
                         key={id}
-                        className='bg-white p-7 shadow-md rounded-lg space-y-3 flex justify-between'
+                        className='bg-white p-7 shadow-md rounded-lg space-y-3 flex flex-col md:flex-row justify-between'
                     >
-                        <div className='flex gap-4'>
+                        <div className='flex flex-col md:flex-row justify-center items-center gap-4'>
                             <img className='h-16 w-16 object-cover rounded' src={image} alt={title} />
                             <div>
                                 <h6 className='text-[20px] font-medium'>{title}</h6>
-                                <div className='flex justify-between gap-4 mt-2'>
+                                <div className='flex  justify-between gap-4 mt-2'>
                                     <button className='text-green-300 flex items-center gap-1.5 shadow-2xl bg-[#f1f5e8] px-2 py-1 rounded-lg'>
                                         <img className='h-4 w-4' src={downloadImg} alt="" />
                                         {formatDownload(downloads)}

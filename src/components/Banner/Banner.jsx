@@ -8,7 +8,8 @@ import { Link, useOutletContext } from 'react-router';
 const Banner = ({ appsData }) => {
     const {handleActiveNav} =useOutletContext();
 
-     const safeAppsData = appsData || [];
+    const safeAppsData = Array.isArray(appsData) ? appsData : [];
+
     return (
         <div className=''>
             <div className='bg-[#d2d2d2] space-y-8 pt-6'>
